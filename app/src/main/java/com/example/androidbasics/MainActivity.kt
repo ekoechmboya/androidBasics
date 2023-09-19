@@ -25,6 +25,7 @@ import com.example.androidbasics.broadcasts.AirplaneModeReceiver
 import com.example.androidbasics.broadcasts.TestReceiver
 import com.example.androidbasics.foregroundServices.RunningService
 import com.example.androidbasics.ui.theme.AndroidBasicsTheme
+import com.example.androidbasics.uris.UrisActivity
 import java.util.jar.Manifest
 
 class MainActivity : ComponentActivity() {
@@ -92,6 +93,13 @@ class MainActivity : ComponentActivity() {
                             }
                         }) {
                             Text(text = "Stop Run")
+
+                        }
+                        Button(onClick = {
+                            Intent(applicationContext, UrisActivity::class.java).also {
+                                startActivity(it)
+                            }
+                        }) {
 
                         }
                     }
